@@ -1,0 +1,9 @@
+Building TR3B
+
+See doc/readme-qt.rst for instructions on building TR3B QT,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of TR3B.
+
+See doc/build-*.txt for instructions on building TR3Bd,
+the intended-for-services, no-graphical-interface, reference
+implementation of TR3B.

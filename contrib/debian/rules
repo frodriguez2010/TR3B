@@ -1,0 +1,33 @@
+#!/usr/bin/make -f
+# -*- mode: makefile; coding: utf-8 -*-
+
+#DEB_MAKE_CHECK_TARGET = test_bitcoin
+#build/bitcoind::
+#	$(if $(filter nocheck,$(DEB_BUILD_OPTIONS)),,src/test_bitcoin)
+
+DEB_INSTALL_EXAMPLES_TR3Bd += debian/examples/*
+DEB_INSTALL_MANPAGES_TR3Bd += debian/manpages/*
+
+%:
+	dh --with bash-completion $@
+
+override_dh_auto_build:
+	cd src; $(MAKE) -f makefile.unix TR3Bd
+	$(MAKE)
+
+override_dh_auto_clean:
+	if [ -f Makefile ]; then $(MAKE) clean; else rm -rf build/; rm -f TR3B-qt; fi
+	cd src; $(MAKE) -f makefile.unix clean
+
+override_dh_auto_configure:
+	qmake TR3B-qt.pro USE_QRCODE=1
+
+override_dh_auto_test:
+	cd src; $(MAKE) -f makefile.unix test_TR3B
+	src/test_TR3B
+
+# Ensure wrapper is set executable
+binary-post-install/TR3Bd:
+	chmod +x $(cdbs_curdestdir)usr/bin/TR3Bd
+binary-post-install/TR3B-qt:
+	chmod +x $(cdbs_curdestdir)usr/bin/TR3B-qt

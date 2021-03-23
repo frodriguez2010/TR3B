@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=TR3B
+Comment=TR3B P2P Cryptocurrency
+Exec=/usr/bin/TR3B-qt
+Terminal=false
+Type=Application
+Icon=/usr/share/pixmaps/bitcoin80.xpm
+MimeType=x-scheme-handler/TR3B;
+Categories=Office;
+Name[en_US]=TR3B-qt.desktop

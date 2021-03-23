@@ -1,0 +1,2 @@
+debian/bin/TR3Bd usr/bin
+src/TR3Bd usr/lib/TR3B

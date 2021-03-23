@@ -1,0 +1,11 @@
+[Protocol]
+exec=TR3B-qt '%u'
+protocol=TR3B
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false
