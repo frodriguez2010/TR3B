@@ -26,8 +26,3 @@ Explorer – http://tr3b.freakhouse.dev/<br>
 
 EXCHANGES<br>
 <br>
-FREAK.EXCHANGE<br>
-MANTA / DOGE - https://freak.exchange/market/DOGE-MANTA<br>
-MANTA / FREAK - https://freak.exchange/market/FREAK-MANTA<br>
-MANTA / RAT - https://freak.exchange/market/RAT-MANTA<br>
-<br>
